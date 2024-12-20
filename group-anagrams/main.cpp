@@ -37,7 +37,13 @@ std::vector<std::vector<std::string>> groupAnagrams(std::vector<std::string>& st
 }
 
 int main() {
-    std::vector<std::string> test = { "act","pots","tops","cat","stop","hat" };
+    std::vector<std::string> input;
+    std::string input;
+    int i = 1;
+    while (input != "") {
+        std::cout << "Enter word #" << std::to_string(i) << " (enter without typing to finalize): ";
+        std::cin >> input;
+    }
     std::vector<std::vector<std::string>> output = groupAnagrams(test);
     std::cout << '{';
     for (auto it = output.begin(); it != output.end(); it++) {
