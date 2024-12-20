@@ -37,14 +37,16 @@ std::vector<std::vector<std::string>> groupAnagrams(std::vector<std::string>& st
 }
 
 int main() {
+    std::string inputWord;
     std::vector<std::string> input;
-    std::string input;
     int i = 1;
-    while (input != "") {
-        std::cout << "Enter word #" << std::to_string(i) << " (enter without typing to finalize): ";
-        std::cin >> input;
+    while (inputWord != "#") {
+        std::cout << "Enter word #" << std::to_string(i) << " (enter a pound symbol (#) to finalize): ";
+        std::cin >> inputWord;
+        if (inputWord != "#") {input.push_back(inputWord);}
+        i++;
     }
-    std::vector<std::vector<std::string>> output = groupAnagrams(test);
+    std::vector<std::vector<std::string>> output = groupAnagrams(input);
     std::cout << '{';
     for (auto it = output.begin(); it != output.end(); it++) {
         std::cout << '{';
