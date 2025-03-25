@@ -398,3 +398,9 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+
+# CLion files
+.idea/
+
+# build directory contents
+build/
